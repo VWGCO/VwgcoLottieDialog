@@ -26,7 +26,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	implementation 'com.github.vwgco:vwgcolottieDialog-Android:V1.0'
+	implementation 'com.github.VWGCO:VwgcoLottieDialog:V1.0'
 }
 ```
 ## VWGCO lottie Dialog
@@ -34,41 +34,41 @@ dependencies {
 Dialog with two buttons:
 
 ``` java
-new vwgcolottieDialog.Builder(this)
-                .setTitle("Granny eating chocolate dialog box") // You can also send title like R.string.from_resources
-                .setMessage("This is a granny eating chocolate dialog box. This library is used to help you easily create fancy lottiey dialog.") // or pass like R.string.description_from_resources
-                .setNegativeBtnText("Cancel") // or pass it like android.R.string.cancel
-                .setPositiveBtnBackground("#FF4081") // or pass it like R.color.positiveButton
-                .setPositiveBtnText("Ok") // or pass it like android.R.string.ok
-                .setNegativeBtnBackground("#FFA9A7A8") // or pass it like R.color.negativeButton
-                .setlottieResource(R.raw.lottie1)   //Pass your lottie here
-                .isCancellable(true)
-                .OnPositiveClicked(new vwgcolottieDialogListener() {
-                    @Override
-                    public void OnClick() {
-                        Toast.makeText(MainActivity.this,"Ok",Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .OnNegativeClicked(new vwgcolottieDialogListener() {
-                    @Override
-                    public void OnClick() {
-                        Toast.makeText(MainActivity.this,"Cancel",Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .build();
+                        new VwgcoLottieDialog
+                                .Builder(this)
+                                .setTitle("Granny eating chocolate dialog box") // You can also send title like R.string.from_resources
+                                .setMessage("This is a granny eating chocolate dialog box. This library is used to help you easily create fancy lottiey dialog.") // or pass like R.string.description_from_resources
+                                .setNegativeBtnText("Cancel") // or pass it like android.R.string.cancel
+                                .setPositiveBtnBackground("#FF4081") // or pass it like R.color.positiveButton
+                                .setPositiveBtnText("Ok") // or pass it like android.R.string.ok
+                                .setNegativeBtnBackground("#FFA9A7A8") // or pass it like R.color.negativeButton
+                                .setlottieResource(R.raw.lottie1)   //Pass your lottie here
+                                .isCancellable(true)
+                                .OnPositiveClicked(new VwgcoLottieDialogListener() {
+                                                       @Override
+                                                       public void OnClick() {
+                                                           Toast.makeText(MainActivity.this,"Cancel",Toast.LENGTH_SHORT).show();
+                                                       } })
+                                .  OnNegativeClicked(new VwgcoLottieDialogListener() {
+                                    @Override
+                                    public void OnClick() {
+                                        Toast.makeText(MainActivity.this,"Cancel",Toast.LENGTH_SHORT).show();
+                                    }
+                                })
+                                .build();
 ```
 
 Dialog with one button:
 
 ``` java
-new vwgcolottieDialog.Builder(this)
+new VwgcoLottieDialog.Builder(this)
                 .setTitle("Granny eating chocolate dialog box")
                 .setMessage("This is a granny eating chocolate dialog box. This library is used to help you easily create fancy lottiey dialog.")
                 .setPositiveBtnText("Ok")
                 .setPositiveBtnBackground("#FF4081")
                 .setlottieResource(R.raw.lottie1)   //Pass your lottie here
                 .isCancellable(true)
-                .OnPositiveClicked(new vwgcolottieDialogListener() {
+                .OnPositiveClicked(new VwgcoLottieDialogListener() {
                     @Override
                     public void OnClick() {
                         Toast.makeText(MainActivity.this,"Ok",Toast.LENGTH_SHORT).show();
